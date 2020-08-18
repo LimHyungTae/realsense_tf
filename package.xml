@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package>
+  <name>realsense_tf</name>
+  <version>0.0.1</version>
+  <description>Check TF!</description>
+
+  <maintainer email="shapelim@kaist.ac.kr">Hyungtae Lim</maintainer>
+  <license>EULA</license>
+  
+  <buildtool_depend>catkin</buildtool_depend>
+  
+  <build_depend>roscpp</build_depend>
+  <run_depend>roscpp</run_depend>
+
+  <build_depend>rospy</build_depend>
+  <run_depend>rospy</run_depend>
+
+  <build_depend>message_generation</build_depend>
+  <run_depend>message_generation</run_depend>
+
+  <run_depend>message_runtime</run_depend>
+</package>

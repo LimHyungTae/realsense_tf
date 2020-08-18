@@ -1,0 +1,12 @@
+<launch>
+
+<node name="pathfollow" pkg="rgtSLAM" type="pathfollow" output="screen">
+        # SUBSCRIBE
+        <remap from="/pathfollow/waypoint" to="/waypoint"/>
+        # PUBLISH
+        <remap from="/pathfollow/control" to="/control"/>
+</node>
+
+<rosparam command="load" file="$(find rgtSLAM)/conf/seromoNavigation.yaml" />
+
+</launch>
