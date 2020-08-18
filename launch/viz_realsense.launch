@@ -1,0 +1,7 @@
+<launch>
+
+<node name="viz_tf" pkg="realsense_tf" type="viz_tf" output="screen">
+</node>
+<node name="rviz" pkg="rviz" type="rviz" args="-d $(find realsense_tf)/rviz/tf_viz.rviz"/>
+
+</launch>
