@@ -91,6 +91,22 @@ void callbackLaser(const sensor_msgs::PointCloud2ConstPtr& input)
 
 int main(int argc, char **argv)
 {
+  Eigen::Matrix4f rot, trans, tf_depth2body;
+  // 20 degree
+  rot<< 1,            0,       0,   0.0,
+          0,       0.9396, -0.3421,   0.0,
+          0,       0.3421,  0.9396,   0.0,
+          0,            0,       0,     1;
+
+
+  trans<<   0,            0,       1,   0.202,
+           -1,            0,       0,   0.0,
+            0,           -1,       0,   0.2896,
+            0,            0,       0,     1;
+
+  tf_depth2body = trans * rot;
+  std::cout<<tf_depth2body<<std::endl;
+
     cnt = 0;
     std::cout<<"Operate TF"<<std::endl;
     ros::init(argc, argv, "merger");
